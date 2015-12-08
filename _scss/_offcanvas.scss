@@ -1,0 +1,113 @@
+$tabbar-height: 64px;
+
+html,
+body {
+    overflow-x: hidden;
+    height: 100%;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabbar {
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    min-height: $tabbar-height;
+    margin-bottom: $line-height-computed;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    background: #fff;
+
+    @include box-shadow(0 1px 1px rgba(0, 0, 0, .05));
+}
+
+.tabbar-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: $tabbar-height;
+}
+
+.tabbar-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: $tabbar-height;
+}
+
+.btn-tabbar {
+    font-size: 24px;
+    line-height: $line-height-base;
+    display: block;
+    width: 100%;
+    height: $tabbar-height;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    color: $brand-primary;
+    border: 0;
+    background: #fff;
+    &:focus,
+    &:hover,
+    &:active {
+        color: #fff;
+        background: $brand-primary;
+    }
+    [class^='icon-'] {
+        line-height: 40px;
+        display: block;
+        height: 40px;
+    }
+    .btn-tabbar-subtitle {
+        font-size: $font-size-small;
+        display: block;
+        text-transform: uppercase;
+    }
+}
+
+.tabbar-center {
+    font-size: $font-size-large;
+    line-height: $tabbar-height;
+    position: absolute;
+    top: 0;
+    right: 72px;
+    left: 72px;
+    text-align: center;
+}
+
+.sidebar-offcanvas {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: -77%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 77%;
+    height: 100%;
+    padding-top: $tabbar-height;
+    background: #fff;
+
+    @include transition(all .25s ease-out);
+    @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+    &.active {
+        left: 0;
+    }
+}
+
+.sidebar-offcanvas.active + .sidebar-offcanvas-overlay {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(#000, .6);
+}
+
+.sidebar-offcanvas-widget {
+    margin: ($line-height-computed/2) 0;
+    padding: ($line-height-computed/2) 8px;
+    border-bottom: 1px solid $gray-lighter;
+}
