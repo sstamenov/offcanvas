@@ -7,6 +7,11 @@ body {
 
     -webkit-overflow-scrolling: touch;
 }
+.offcanvas-wrap {
+    overflow-x: hidden; 
+    width: 100%; 
+    position: relative;
+}
 
 .tabbar {
     position: relative;
