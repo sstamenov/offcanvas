@@ -94,7 +94,16 @@ body {
     &.active {
         left: 0;
     }
+
+    &.right {
+        left: auto; 
+        right: -77%;
+    }
+    &.right.active {
+        right: 0;
+    }
 }
+
 
 .sidebar-offcanvas.active + .sidebar-offcanvas-overlay {
     position: fixed;

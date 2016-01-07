@@ -9,20 +9,37 @@
     
     <div class="tabbar">
         <div class="tabbar-left">
-            <button type="button" class="btn-tabbar" data-toggle="offcanvas">
+            <button type="button" class="btn-tabbar" data-toggle="offcanvas" data-target="#sidebar-offcanvas-left">
                 <span class="icon-menu" aria-hidden="true"></span>
-                <span class="btn-tabbar-subtitle">Menü</span>
+                <span class="btn-tabbar-subtitle">Left</span>
             </button>
         </div>
 
         <div class="tabbar-center">
             <!-- page title or logo //-->
+        </div> 
+        
+        <div class="tabbar-right">
+            <button type="button" class="btn-tabbar" data-toggle="offcanvas" data-target="#sidebar-offcanvas-right">
+                <span class="icon-menu" aria-hidden="true"></span>
+                <span class="btn-tabbar-subtitle">Right</span>
+            </button>
         </div>
     </div>
 
-    <aside class="sidebar-offcanvas">
+    <aside class="sidebar-offcanvas" id="sidebar-offcanvas-left">
         <!-- offcanvas content //-->
         <div class="sidebar-offcanvas-widget">
+            <h1>Left</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde quis illum odio sed animi culpa placeat ipsa tempore, repudiandae porro libero iste quo consequuntur similique quisquam sapiente eius nobis.    
+        </div>
+    </aside>
+    <div class="sidebar-offcanvas-overlay" data-toggle="offcanvas"></div>
+    
+    <aside class="sidebar-offcanvas right" id="sidebar-offcanvas-right">
+        <!-- offcanvas content //-->
+        <div class="sidebar-offcanvas-widget">
+            <h1>Right</h1>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam unde quis illum odio sed animi culpa placeat ipsa tempore, repudiandae porro libero iste quo consequuntur similique quisquam sapiente eius nobis.    
         </div>
     </aside>

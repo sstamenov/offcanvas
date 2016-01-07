@@ -2,7 +2,7 @@
     $(document).ready(function() {
         $('[data-toggle="offcanvas"]').click(function(e) {
             e.preventDefault();
-            $('.sidebar-offcanvas').toggleClass('active');
+            $($(this).attr("data-target")).toggleClass('active');
         });
     });
 })(jQuery);
